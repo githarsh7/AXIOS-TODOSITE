@@ -1,0 +1,277 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(
+    to bottom right,
+    #fff7fb,
+    #ffe4ec,
+    #fff0f5
+  );
+  min-height: 100vh;
+}
+
+/* MAIN CONTAINER */
+
+.container{
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* HEADER */
+
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 60px;
+}
+
+.header h1{
+  font-size: 58px;
+  font-weight: 500;
+  color: #7a284b;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(255,182,193,0.4);
+}
+
+/* PLUS BUTTON */
+
+.plus-btn{
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(
+    135deg,
+    #ff8fb1,
+    #ffb7c5
+  );
+  color: white;
+  font-size: 34px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 6px 18px rgba(255,182,193,0.5);
+}
+
+.plus-btn:hover{
+  transform: scale(1.08);
+}
+
+/* EXISTING STABLE CARD */
+
+.cards-container{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 80px;
+  margin-top: 20px;
+}
+
+/* CARD */
+
+.card-container{
+  width: 470px;
+}
+
+/* JAPANESE SCROLL STYLE */
+
+.card-content{
+  background: linear-gradient(
+    to bottom,
+    #fffdf8,
+    #ffeef4
+  );
+  border: 3px solid #f7b5c8;
+  padding: 35px;
+  border-radius: 28px;
+  position: relative;
+  box-shadow:
+    0 10px 25px rgba(255,182,193,0.25),
+    0 0 0 8px rgba(255,255,255,0.4);
+  overflow: hidden;
+}
+
+/* Decorative Japanese Pattern */
+
+.card-content::before{
+  content: "桜";
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 55px;
+  color: rgba(255,182,193,0.2);
+  font-weight: bold;
+}
+
+.card-content p{
+  font-size: 22px;
+  margin-bottom: 28px;
+  color: #5f2d3f;
+  line-height: 1.6;
+}
+
+/* BUTTONS */
+
+.btns{
+  display: flex;
+  gap: 18px;
+  margin-top: 25px;
+}
+
+/* EDIT BUTTON */
+
+.edit-btn{
+  padding: 12px 30px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(
+    to right,
+    #ff8fb1,
+    #ffb7c5
+  );
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(255,182,193,0.4);
+}
+
+.edit-btn:hover{
+  transform: translateY(-2px);
+}
+
+/* DELETE BUTTON */
+
+.delete-btn{
+  padding: 12px 30px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(
+    to right,
+    #c44569,
+    #f78fb3
+  );
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete-btn:hover{
+  transform: translateY(-2px);
+}
+
+/* POPUP OVERLAY */
+
+.popup-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  background-color: rgba(255,240,245,0.35);
+  z-index: 999;
+}
+
+/* POPUP BOX */
+
+.popup-box{
+  width: 400px;
+  background: linear-gradient(
+    to bottom,
+    #fffdfd,
+    #ffeef4
+  );
+  border-radius: 28px;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: relative;
+  border: 3px solid #f7b5c8;
+  box-shadow:
+    0 12px 30px rgba(255,182,193,0.3);
+}
+
+/* CLOSE BUTTON */
+
+.close-btn{
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  border: none;
+  background: none;
+  font-size: 30px;
+  color: #d63384;
+  cursor: pointer;
+}
+
+/* INPUTS */
+
+.popup-box input,
+.edit-box input{
+  padding: 14px;
+  border-radius: 12px;
+  border: 2px solid #f7c5d6;
+  font-size: 18px;
+  background-color: #fffafb;
+  outline: none;
+  color: #5f2d3f;
+}
+
+.popup-box input:focus,
+.edit-box input:focus{
+  border-color: #ff8fb1;
+}
+
+/* ADD BUTTON */
+
+.add-user-btn,
+.update-btn{
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(
+    to right,
+    #ff8fb1,
+    #ffb7c5
+  );
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.add-user-btn:hover,
+.update-btn:hover{
+  transform: scale(1.03);
+}
+
+/* EDIT BOX */
+
+.edit-box{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* NEWLY ADDED CARD SPACING */
+
+.new-card-section{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 120px;
+}
