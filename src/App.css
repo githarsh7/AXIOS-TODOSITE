@@ -41,6 +41,13 @@ body{
   text-shadow: 2px 2px 8px rgba(255,182,193,0.4);
 }
 
+@media (max-width: 600px) {
+  .header h1 {
+    font-size: 36px;
+    letter-spacing: 1px;
+  }
+}
+
 /* PLUS BUTTON */
 
 .plus-btn{
@@ -64,20 +71,29 @@ body{
   transform: scale(1.08);
 }
 
-/* EXISTING STABLE CARD */
+/* CARDS GRID — responsive */
 
 .cards-container{
   width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  padding-left: 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 30px;
+  padding: 0 80px;
   margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr;   /* single column on mobile */
+    padding: 0 16px;
+    gap: 20px;
+  }
 }
 
 /* CARD */
 
 .card-container{
-  width: 470px;
+  width: 100%;
 }
 
 /* JAPANESE SCROLL STYLE */
@@ -115,6 +131,12 @@ body{
   margin-bottom: 28px;
   color: #5f2d3f;
   line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .card-content p {
+    font-size: 18px;
+  }
 }
 
 /* BUTTONS */
@@ -202,6 +224,13 @@ body{
   border: 3px solid #f7b5c8;
   box-shadow:
     0 12px 30px rgba(255,182,193,0.3);
+}
+
+@media (max-width: 600px) {
+  .popup-box {
+    width: 90%;
+    padding: 24px 20px;
+  }
 }
 
 /* CLOSE BUTTON */
