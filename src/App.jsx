@@ -187,16 +187,7 @@ const App = () => {
 
         {/* CARDS */}
 
-        <div
-          className='cards-container'
-          style={{
-            display: 'flex',
-            gap: '80px',
-            alignItems: 'flex-start',
-            paddingLeft: '40px',
-            marginTop: '50px'
-          }}
-        >
+        <div className='cards-container'>
 
           {/* STABLE CARD */}
 
