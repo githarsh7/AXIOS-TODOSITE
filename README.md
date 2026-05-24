@@ -1,16 +1,152 @@
-# React + Vite
+# AXIOS-TODOSITE
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React CRUD application built with Axios and MockAPI for persistent user data management. This project provides a responsive and aesthetic user interface with add, edit, update, and delete functionality using React Hooks, Context API, Reducers, and REST API integration.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Persistent user data storage using MockAPI
+- Add new user cards dynamically
+- Edit existing user details
+- Delete user records
+- Refresh-safe data handling
+- Axios API integration
+- React Context API state management
+- Reducer-based data handling
+- Popup form UI for adding users
+- Japanese-inspired aesthetic UI design
+- Responsive and clean layout
+- Stable default profile card display
 
-## React Compiler
+## Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React JS
+- Axios
+- MockAPI
+- Context API
+- React Reducer
+- CSS3
+- JavaScript (ES6)
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+src/
+│
+├── components/
+│   └── Card.jsx
+│
+├── context/
+│   └── Context.jsx
+│
+├── reducer/
+│   └── Reducers.jsx
+│
+├── App.jsx
+├── App.css
+├── index.css
+├── main.jsx
+```
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/githarsh7/AXIOS-TODOSITE.git
+```
+
+Navigate to the project directory:
+
+```bash
+cd AXIOS-TODOSITE
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+## MockAPI Configuration
+
+This project uses MockAPI for backend data persistence.
+
+Example API Base URL:
+
+```bash
+https://6a12b0af78d0434e0d5d5c08.mockapi.io/userDatas
+```
+
+Configure the Axios base URL inside:
+
+```bash
+src/main.jsx
+```
+
+Example:
+
+```javascript
+axios.defaults.baseURL =
+'https://6a12b0af78d0434e0d5d5c08.mockapi.io/userDatas'
+```
+
+## CRUD Operations
+
+### Create
+Add new user cards using the popup form.
+
+### Read
+Fetch and display user data from MockAPI.
+
+### Update
+Edit existing user details with pre-filled form inputs.
+
+### Delete
+Remove user cards permanently from the backend.
+
+## UI Design
+
+The application includes:
+
+- Japanese-inspired aesthetic theme
+- Soft pink and white color palette
+- Responsive card layout
+- Elegant popup modal design
+- Modern minimal user experience
+
+## Functional Highlights
+
+- Stable default profile card always visible
+- Newly added card appears separately
+- Data persists after page refresh
+- Edit form auto-fills existing user data
+- Smooth and user-friendly interactions
+
+## Future Improvements
+
+- Authentication system
+- Search and filter functionality
+- Dark mode support
+- User image upload
+- Pagination support
+- Form validation enhancements
+
+## Connect with Me 🤝 :
+- LinkedIn : [HARSHAA SG](https://www.linkedin.com/in/harshaasg)  
+- Gmail : harshaavardhan8@gmail.com
+
+⭐ Feel free to fork this project and improve it!
+
+## Repository
+
+https://github.com/githarsh7/AXIOS-TODOSITE
+
+## License
+
+This project is open source and available under the MIT License.
