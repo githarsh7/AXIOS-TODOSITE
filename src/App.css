@@ -5,7 +5,7 @@
 }
 
 body{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Lato', Arial, sans-serif;
   background: linear-gradient(
     to bottom right,
     #fff7fb,
@@ -34,8 +34,9 @@ body{
 }
 
 .header h1{
+  font-family: 'Playfair Display', serif;
   font-size: 58px;
-  font-weight: 500;
+  font-weight: 600;
   color: #7a284b;
   letter-spacing: 2px;
   text-shadow: 2px 2px 8px rgba(255,182,193,0.4);
@@ -84,7 +85,7 @@ body{
 
 @media (max-width: 768px) {
   .cards-container {
-    grid-template-columns: 1fr;   /* single column on mobile */
+    grid-template-columns: 1fr;
     padding: 0 16px;
     gap: 20px;
   }
@@ -127,15 +128,22 @@ body{
 }
 
 .card-content p{
-  font-size: 22px;
-  margin-bottom: 28px;
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  margin-bottom: 20px;
   color: #5f2d3f;
   line-height: 1.6;
 }
 
+.card-content p strong {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  color: #7a284b;
+}
+
 @media (max-width: 600px) {
   .card-content p {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 
@@ -159,7 +167,10 @@ body{
     #ffb7c5
   );
   color: white;
-  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
   cursor: pointer;
   transition: 0.3s;
   box-shadow: 0 4px 15px rgba(255,182,193,0.4);
@@ -181,7 +192,10 @@ body{
     #f78fb3
   );
   color: white;
-  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -217,46 +231,63 @@ body{
   );
   border-radius: 28px;
   padding: 35px;
+  padding-top: 50px; /* ← extra top space so close btn doesn't overlap inputs */
   display: flex;
   flex-direction: column;
   gap: 18px;
   position: relative;
   border: 3px solid #f7b5c8;
-  box-shadow:
-    0 12px 30px rgba(255,182,193,0.3);
+  box-shadow: 0 12px 30px rgba(255,182,193,0.3);
 }
 
 @media (max-width: 600px) {
   .popup-box {
     width: 90%;
-    padding: 24px 20px;
+    padding: 50px 20px 24px 20px; /* top stays 50px on mobile too */
   }
 }
 
-/* CLOSE BUTTON */
+/* CLOSE BUTTON — floats above, doesn't push content */
 
 .close-btn{
   position: absolute;
-  top: 14px;
-  right: 18px;
+  top: 12px;
+  right: 16px;
   border: none;
   background: none;
-  font-size: 30px;
+  font-size: 26px;
   color: #d63384;
   cursor: pointer;
+  line-height: 1;
+  padding: 4px 8px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.close-btn:hover {
+  background: rgba(214, 51, 132, 0.1);
 }
 
 /* INPUTS */
 
 .popup-box input,
 .edit-box input{
-  padding: 14px;
+  padding: 14px 16px;
   border-radius: 12px;
   border: 2px solid #f7c5d6;
-  font-size: 18px;
+  font-family: 'Lato', sans-serif;
+  font-size: 17px;
   background-color: #fffafb;
   outline: none;
   color: #5f2d3f;
+  width: 100%;
+}
+
+.popup-box input::placeholder,
+.edit-box input::placeholder {
+  font-family: 'Lato', sans-serif;
+  color: #c48fa5;
+  font-style: italic;
 }
 
 .popup-box input:focus,
@@ -264,7 +295,7 @@ body{
   border-color: #ff8fb1;
 }
 
-/* ADD BUTTON */
+/* ADD / UPDATE BUTTON */
 
 .add-user-btn,
 .update-btn{
@@ -277,10 +308,13 @@ body{
     #ffb7c5
   );
   color: white;
-  font-size: 20px;
+  font-family: 'Lato', sans-serif;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 1px;
   cursor: pointer;
   transition: 0.3s;
-  margin-top: 10px;
+  margin-top: 6px;
 }
 
 .add-user-btn:hover,
